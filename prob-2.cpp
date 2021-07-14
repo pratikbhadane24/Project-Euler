@@ -5,8 +5,27 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 #include <iostream>
 using namespace std;
 
+int fib(int n)
+{
+    if (n <= 1)
+    {
+        return n;
+    }
+    return fib(n - 1) + fib(n - 2);
+}
+int main()
+{
+    int fib(), temp1, temp2, sum = 0;
+    for (int i = 0; i < 100; i++)
+    {
+        fib(i) = temp1;
+        if (temp1 % 2 == 0)
+            {
+                temp2 = temp1;
+                sum += temp2;
+            }
+    }
+    cout << "THe sum is " << sum;
 
-int main(){
-    
     return 0;
 }

@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    int sum1 = 0, sum2 = 0;
+    int sum1 = 0;
 
     for (int i = 1; i < 1000; i++)
     {
@@ -14,14 +14,7 @@ int main()
             sum1 += i;
         }
     }
-    for (int j = 0; j < 1000; j++)
-    {
-        if (j % 15 == 0)
-        {
-            sum2 += j;
-        }
-    }
-    cout << sum1 - sum2;
+    cout << sum1;
 
     return 0;
 }
