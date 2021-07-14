@@ -2,8 +2,10 @@
 #include <iostream>
 #include <math.h>
 using namespace std;
-void PrimeFactors(long long int n)
+
+int main()
 {
+    long long int n = 600851475143;
     while (n % 2 == 0)
     {
         cout << "2\t";
@@ -19,11 +21,6 @@ void PrimeFactors(long long int n)
     }
     if (n > 2)
         cout << n << "\t";
-}
-int main()
-{
-    long long int n = 600851475143;
-    cout << "Prime factors of " << n << " are :\t";
-    PrimeFactors(n);
+
     return 0;
 }
