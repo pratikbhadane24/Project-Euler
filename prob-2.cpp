@@ -4,28 +4,21 @@ the first 10 terms will be:
 By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms. */
 #include <iostream>
 using namespace std;
-
-int fib(int n)
-{
-    if (n <= 1)
-    {
-        return n;
-    }
-    return fib(n - 1) + fib(n - 2);
-}
 int main()
 {
-    int fib(), temp1, temp2, sum = 0;
-    for (int i = 0; i < 100; i++)
+    int prev1 = 1, current = 2, next = 3, sum = 0;
+
+    while (next <= 4000000)
     {
-        fib(i) = temp1;
-        if (temp1 % 2 == 0)
-            {
-                temp2 = temp1;
-                sum += temp2;
-            }
+        if (current <= 4000000 && current % 2 == 0)
+        {
+            sum += current;
+        }
+        next = current + prev1;
+        prev1 = current;
+        current = next;
     }
-    cout << "THe sum is " << sum;
+    cout << sum;
 
     return 0;
 }
